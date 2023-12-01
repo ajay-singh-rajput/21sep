@@ -1,0 +1,187 @@
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top: 1px solid #FFF8DC;
+    padding-top: 6vh;
+    background: url(https://cdn.shopify.com/s/files/1/1619/4221/products/kate_back_to_school_photo_backdrop_10x6.5ft_HFD0050-B.jpg?v=1630888440&width=1800);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.allCards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vmax;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    padding: 1vmax;
+}
+.card{
+    width: 320px;
+    height: 500px;
+    padding: 0 2.2vmax;
+    border-radius: 1vmax;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+border: 1px solid rgba(255,255,255,0.375);
+    /* flex-wrap: nowrap; */
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4vmax 2vmax;
+    transition: transform linear 0.7s;
+    position: absolute;
+    
+}
+.btop{
+    margin-top: 1vmax;
+    width: 250px;
+    height: 300px;
+    background-color: tomato;
+    border: 4px solid rgb(184, 60, 38);
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform-origin: bottom;
+    transform:  perspective(900px) rotateX(0deg);
+    transition: transform linear 0.7s;
+    object-fit: cover;
+    /* border-radius: 0.5vmax 0 0 0.5vmax; */
+}
+.bbottom{
+    width: 250px;
+    height: 40px;
+    border: 4px solid rgb(184, 60, 38);
+    border-right: none;
+    background-color: white;
+    background: linear-gradient(to top, #dadada,white, #dadada);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transform-origin: top;
+    clip-path: polygon(30% 0%, 100.1% 0%, 94.8% 20.4%, 93% 47.9%, 94.5% 85.2%, 100.1% 100.7%, 0% 100.7%, 0% 0%);
+    transform: perspective(600px) rotateX(-90deg) ;
+    transition: transform linear 0.7s;
+}
+
+
+.top:hover .btop{
+    transform:  perspective(900px) rotateX(85deg);
+}
+.top:hover .bbottom{
+    transform:  perspective(900px) rotateX(-5deg);
+}
+/* .top:hover{
+    transform: translateY(-450px);
+} */
+.btnD{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vmax;
+}
+.btnD a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2vmax;
+    width: 100%;
+    height: 100%;
+}
+.btnD button, .popUp button{
+    cursor: pointer;
+    margin-top: 1vmax;
+    border: none;
+    border-radius: 0.5vmax;
+    padding: 0.7vmax 2vmax;
+}
+.btnD i{
+    margin-right: 5px;
+}
+.delete{
+    background-color: tomato;
+    color: white;
+    font-size: 1.2vmax;
+}
+.update{
+    background-color: #29CDB5;
+}
+.all{
+    /* background-color: yellow; */
+    font-size: 1.2vmax;
+    font-weight: 700;
+    color: #FFF8DC;
+}
+.sp{
+    font-size: 1vmax;
+    font-weight: 400;
+    color: white;
+}
+.titleB{
+    font-size: 1.5vmax;
+    color: tomato;
+}
+
+
+.popUp{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+border: 1px solid rgba(255,255,255,0.375);
+animation: sc 0.25s ease 1 forwards;
+}
+@keyframes sc {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.popDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #303030;
+    border-radius: 2vmax;
+    padding: 2vmax;
+    color: tomato;
+}
+.popDiv p, .popDiv a{
+    color: white;
+    font-size: 1.2vmax;
+    text-decoration: none;
+}
+
+button:active{
+    filter:invert(1);
+}

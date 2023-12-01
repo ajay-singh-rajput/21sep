@@ -1,0 +1,64 @@
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(https://c8.alamy.com/comp/RM8K67/texture-of-black-and-white-lines-scratches-dots-grunge-dust-and-scratched-background-texture-of-old-scratched-dirty-surface-RM8K67.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+}
+main >div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vmax;
+    text-align: center;
+/* background-color: #E2BAF9; */
+}
+.right{
+    height: 60vh;
+    background: url('../images/books.png');
+background-position: bottom;
+background-repeat: no-repeat;
+background-size: contain;
+/* background-color: #E2BAF9; */
+}
+.graf{
+padding: 0 3vmax;
+color: #404040;
+/* color: #ffff; */
+font-size: 1.3vmax;
+margin-top: 3vmax;
+font-family: "Viner Hand ITC";
+
+/* mix-blend-mode: screen; */
+/* -webkit-text-stroke: 0.02vmax #FFFF; */
+/* text-shadow: 0 0 5px red; */
+}
+.btn{
+padding: 1vmax 4vmax;
+outline: none;
+border: none;
+font-size: 1.1vmax;
+border-radius: 1vmax;
+box-shadow: 0 0 5px white;
+background-color: crimson;
+transition: all ease 0.2s;
+
+}
+.btn a{
+color: white;
+text-decoration: none;
+}
+.explore{
+/* color: yellow; */
+background-color: black;
+}
+.btn:active{
+filter: invert(1);
+}

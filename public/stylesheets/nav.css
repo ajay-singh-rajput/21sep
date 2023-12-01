@@ -1,0 +1,42 @@
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: hsl(225, 6%, 13%);
+    padding: 0 2vmax;
+    border-bottom: 0.1vmax solid #0000;
+    box-shadow: 0 0 20px rgb(97, 97, 97);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: hsl(225,6%,13%,0.8);
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+border: 1px solid hsl(225,6%,13%,0.4);
+}
+.logoImg{
+    width: 80px;
+    height: 70px;
+    background: url(https://i.pinimg.com/originals/dd/64/da/dd64da585bc57cb05e5fd4d8ce873f57.png);
+    background-size: 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: lighten;
+}
+nav .ops{
+    display: flex;
+    align-items: center;
+    gap: 1vmax;
+}
+nav a{
+    text-decoration: none;
+    /* color: black; */
+    font-size: 1.2vmax;
+}
+nav *{
+    color: #ffff;
+    font-family: 'Bauhaus 93';
+}

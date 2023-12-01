@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/nav.css">
+<link rel="stylesheet" href="/stylesheets/login.css">
+<style>
+    .sp, .submit{
+        background-color: #29CDB5;
+    }
+    
+</style>
+  <main>
+        <form action="/update" method="post">
+          <h2>Edit your book</h2>
+          <span class="sp"><i class="ri-open-arm-fill"></i><input type="text" name="author" placeholder="Author name" value="<%= bookD.author%>"></span>
+          <span class="sp"><i class="ri-earth-fill"></i><select name="country" id="">
+            <option value="<%= bookD.country%>"><%= bookD.country%></option>
+            <% countries.forEach(function(co){ %>
+    
+              <option value="<%= co %>"><%= co %></option>
+           <% }) %>
+          </select></span>
+          <span class="sp"><i class="ri-link"></i><input type="text" name="thumbnail" placeholder="Poster link" value="<%= bookD.thumbnail%>"></span>
+          <span class="sp"><i class="ri-global-fill"></i><select name="language" id="">
+            <option value="<%= bookD.language%>"><%= bookD.language%></option>
+           <% languages.forEach(function(la){ %>
+    
+              <option value="<%= la %>"><%= la %></option>
+           <% }) %>
+          </select></span>
+          <span class="sp"><i class="ri-pages-fill"></i><input type="text" name="pages" placeholder="page count" value="<%= bookD.pages%>"></span>
+          <span class="sp"><i class="ri-file-reduce-fill"></i><input type="text" name="title" placeholder="title" value="<%= bookD.title%>"></span>
+          <span class="sp"><i class="ri-calendar-fill"></i><input type="number" name="year" id="" placeholder="year" value="<%= bookD.year%>"></span>
+          <button class="submit">Submit</button>
+        </form>
+  </main>
+</body>
+</html>

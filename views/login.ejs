@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="stylesheets/login.css">
+  <main>
+    <% let abc = changes %>
+    
+    <% if( abc === 0 ) { %>
+        <form action="/add" method="post">
+          <h2>Register your book</h2>
+          <span class="sp"><i class="ri-open-arm-fill"></i><input type="text" name="author" placeholder="Author name"></span>
+          <span class="sp"><i class="ri-earth-fill"></i><select name="country" id="">
+            <option value="false">Choose Country</option>
+            <% countries.forEach(function(co){ %>
+    
+              <option value="<%= co %>"><%= co %></option>
+           <% }) %>
+          </select></span>
+          <span class="sp"><i class="ri-link"></i><input type="text" name="thumbnail" placeholder="Poster link"></span>
+          <span class="sp"><i class="ri-global-fill"></i><select name="language" id="">
+            <option value="false">Choose Language</option>
+           <% languages.forEach(function(la){ %>
+    
+              <option value="<%= la %>"><%= la %></option>
+           <% }) %>
+          </select></span>
+          <span class="sp"><i class="ri-pages-fill"></i><input type="text" name="pages" placeholder="page count"></span>
+          <span class="sp"><i class="ri-file-reduce-fill"></i><input type="text" name="title" placeholder="title"></span>
+          <span class="sp"><i class="ri-calendar-fill"></i><input type="number" name="year" id="" placeholder="year"></span>
+          <button class="submit">Submit</button>
+        </form>
+        <% } else { %>
+          <div class="added">
+            <h1>Book added successfully</h1>
+            <button class="submit"><a href="/redirect">Click to add another</a></button>
+            
+    </div>
+   <% } %>
+
+    
+  </main>
+</body>
+</html>
